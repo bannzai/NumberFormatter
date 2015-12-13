@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9059" systemVersion="14F1021" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="wbP-IU-dWB">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9049"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="52m-h1-KZ9">
+            <objects>
+                <tableViewController id="wbP-IU-dWB" customClass="ViewController" customModule="NumberFormatter" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="wcf-Bq-68T">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="Cell" id="jWS-Ra-Kpu" customClass="Cell" customModule="NumberFormatter" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="28" width="600" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="jWS-Ra-Kpu" id="Ksv-8d-T5I">
+                                    <rect key="frame" x="0.0" y="0.0" width="600" height="43"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="right" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="5bf-Hf-WDM">
+                                            <rect key="frame" x="62" y="5" width="520" height="40"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="40" id="xRv-J2-jld"/>
+                                            </constraints>
+                                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                            <textInputTraits key="textInputTraits"/>
+                                        </textField>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wEu-PP-kol">
+                                            <rect key="frame" x="10" y="11" width="42" height="21"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="5bf-Hf-WDM" firstAttribute="top" secondItem="Ksv-8d-T5I" secondAttribute="top" constant="5" id="FoK-x9-y6t"/>
+                                        <constraint firstAttribute="trailingMargin" secondItem="5bf-Hf-WDM" secondAttribute="trailing" constant="10" id="N4N-HT-LjH"/>
+                                        <constraint firstItem="5bf-Hf-WDM" firstAttribute="leading" secondItem="wEu-PP-kol" secondAttribute="trailing" constant="10" id="OjB-X1-D7m"/>
+                                        <constraint firstItem="wEu-PP-kol" firstAttribute="centerY" secondItem="Ksv-8d-T5I" secondAttribute="centerY" id="R5A-Y2-REB"/>
+                                        <constraint firstItem="wEu-PP-kol" firstAttribute="leading" secondItem="Ksv-8d-T5I" secondAttribute="leading" constant="10" id="dMD-al-yBT"/>
+                                    </constraints>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="label" destination="wEu-PP-kol" id="JbM-0L-w9y"/>
+                                    <outlet property="textField" destination="5bf-Hf-WDM" id="97L-b1-Ow6"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="wbP-IU-dWB" id="LQF-kD-PS6"/>
+                            <outlet property="delegate" destination="wbP-IU-dWB" id="oWe-Fe-MiL"/>
+                        </connections>
+                    </tableView>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="cf2-jl-Ier" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="390" y="-8"/>
+        </scene>
+    </scenes>
+</document>
